@@ -1,3 +1,5 @@
+// RABU, 7, JANUARY 2026, 11.31 - 16.42
+
 let nilai: number = 100;
 if(nilai >= 80 && nilai === 100 ) {
     const pemberitahuan = "lulus"
