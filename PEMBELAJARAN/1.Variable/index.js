@@ -45,4 +45,5 @@ let umur = 18;
 let sudahpunyaKTP = true;
 const hasil = umur >= 17 && sudahpunyaKTP;
 console.log(hasil);
+// 
 //# sourceMappingURL=index.js.map
