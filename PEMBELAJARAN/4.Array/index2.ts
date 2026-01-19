@@ -1,4 +1,4 @@
-// SENIN, 19, JANUARY 2026, 12.49 - 
+// SENIN, 19, JANUARY 2026, 12.49 - 13.39. lama karena nyantai dan sambil makan
 
 // no 1
 // ["apel", "jeruk", "mangga", "pisang"] Ambil dan simpan elemen pertama elemen terakhir ke dalam variabel terpisah.
@@ -41,5 +41,8 @@ console.log(number3);
 // no 5
 // ["merah", "kuning", "hijau", "biru"] Ambil hanya ["kuning", "hijau"] dan simpan ke variabel baru.
 let lampu = ["merah", "kuning", "hijau", "biru"];
-let lampu2 = (lampu[0], lampu[lampu.length-2])
-
+let lampu2 = [lampu[1], lampu[lampu.length-2]]
+console.log(lampu2);
+// dengan method saja
+console.log(lampu.slice(1,3));
+//slice(start,end)
