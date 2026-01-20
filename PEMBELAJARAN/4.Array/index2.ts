@@ -1,4 +1,4 @@
-// SENIN, 19, JANUARY 2026, 12.49 - 13.39. lama karena nyantai dan sambil makan
+// SENIN, 19, JANUARY 2026, 12.49 - 13.39
 
 // no 1
 // ["apel", "jeruk", "mangga", "pisang"] Ambil dan simpan elemen pertama elemen terakhir ke dalam variabel terpisah.
