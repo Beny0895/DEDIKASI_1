@@ -1,4 +1,4 @@
-// SELASA, 6, JANUARY 2026, 12.11 - 13.29. lama karena lagi nyantai sambil dengar lagu.
+// SELASA, 6, JANUARY 2026, 12.11 - 13.29
 
 // soal 1
 const Nama: string = "budi";
