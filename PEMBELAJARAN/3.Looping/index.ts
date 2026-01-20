@@ -1,4 +1,4 @@
-// MINGGU, 11, JANUARY 2026, 15.14 - 16.11. lama karena sambil dengar lagu
+// MINGGU, 11, JANUARY 2026, 15.14 - 16.11
 
 // no 1
 // Buat program menggunakan for untuk menampilkan angka 1 sampai 5 ke console.
