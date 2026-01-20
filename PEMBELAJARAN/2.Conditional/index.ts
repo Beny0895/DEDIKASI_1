@@ -1,4 +1,4 @@
-// RABU, 7, JANUARY 2026, 12.11 - 13.21. lama karena sambil nonton
+// RABU, 7, JANUARY 2026, 12.11 - 13.21
 
 // no 1
 let angka: number = 1;

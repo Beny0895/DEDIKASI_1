@@ -1,4 +1,4 @@
-// RABU, 7, JANUARY 2026, 11.31 - 16.42. lama karena nonton
+// RABU, 7, JANUARY 2026, 14.31 - 16.42. lama karena nonton
 
 let nilai: number = 100;
 if(nilai >= 80 && nilai === 100 ) {
