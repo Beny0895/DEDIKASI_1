@@ -15,19 +15,19 @@ console.log(user);
 // Buat object mobil, jika bensin method jalan() → mengurangi bensin, method isiBensin() → menambah bensin
 const mobil = {
     merk: "bmw",
-    bensin: "setengah",
+    bensin: 5,
     jalan() {
-        this.bensin = "bensin berkurang"
+        this.bensin -= 1
     },
     isiBensin () {
-        this.bensin = "penuh"
+        this.bensin += 1
     }
 };
 mobil.isiBensin();
 console.log(mobil.bensin);
 
 // soal 3
-// Buat object akun yang memiliki: username email, profil (object) -> namaLengkap alamat umur,
+// Buat object akun yang memiliki: username email, profil (object) -> namaLengkap, alamat, umur.
 // Ambil dan tampilkan: nama lengkap alamat
 const akun = {
     username: "buds",
@@ -39,7 +39,7 @@ const akun = {
     }
 };
 console.log(akun.profile.namaLengkap)
-console.log(akun.profile.umur);
+console.log(akun.profile.alamat);
 
 // no 4
 // Buat object produk dengan: nama, harga, stok Buat logika: Jika stok 0 → tampilkan "Produk habis" Jika ada → "Produk tersedia"
@@ -48,10 +48,10 @@ const produk = {
     harga: 1000000,
     stock: 0,
     cekStocks() {
-        if(this.stock > 0) {
-            this.stock -=1
+        if(this.stock === 0) {
+            console.log("produk tersedia")
         } else {
-            console.log("produck habis")
+            console.log("produk habis")
         }
     }
 };
