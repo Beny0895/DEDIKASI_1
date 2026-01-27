@@ -10,38 +10,38 @@ class User {
     constructor(paramsNama: string, paramsUmur: number) {
         this.nama = paramsNama;
         this.umur = paramsUmur;
-    }   
+    };  
 
     introduce () {
         return `hallo nama saya ${this.nama}, umur saya ${this.umur} tahun`
-    }
+    };
 
 };
 
-const object = new User("budi", 22)
-console.log(object)
+const object = new User("budi", 22);
+console.log(object);
 
 // no 2
 // Buat class Counter. Ketentuan: Property: nilai (nilai awal dari constructor) .
 // Method: pertambahan() → menambah nilai +1, pengurangan() → mengurangi nilai -1, tampilkanData() → mengembalikan nilai saat ini
 class Counter {
-    nilai: number
+    nilai: number;
 
     constructor (paramsnilai: number) {
         this.nilai = paramsnilai;
-    }
+    };
 
     pertambahan() {
         this.nilai += 1 
-    }
+    };
 
     pengurangan() {
         this.nilai -= 1
-    }
+    };
 
     tampilkanData() {
         return this.nilai
-    }
+    };
 };
 const counter = new Counter(10);
 counter.pengurangan();
@@ -60,17 +60,17 @@ class Produk {
 
     constructor(paramsnama: string, paramsharga: number) {
         this.nama = paramsnama;
-        this.harga = paramsharga
+        this.harga = paramsharga;
         if(this.harga < 0 ) {
             this.harga = 0
-        }else {
+        } else {
             this.harga = paramsharga
-        }
-    }
+        };
+    };
 
     tampilkanInfo() {
         return `Produck: ${this.nama}, Harga ${this.harga}`
-    }
+    };
 };
 const produk = new Produk("tv", -100000);
 console.log(produk.tampilkanInfo());
@@ -85,7 +85,7 @@ class Murid {
     constructor(paramsnama: string, paramsnilai: number) {
         this.nama = paramsnama;
         this.nilai = paramsnilai;                                       
-    }
+    };
 
     tampilkanData() {
         if(this.nilai >= 80) {
@@ -96,11 +96,11 @@ class Murid {
             return "C"
         } else {
             return "D"
-        }
-    }
+        };
+    };
 };
-const murid = new Murid("budi", 90)
-console.log(murid.tampilkanData())
+const murid = new Murid("budi", 90);
+console.log(murid.tampilkanData());
 
 // no 5
 // Buat class AkunBank. Ketentuan: Property: pemilik, saldo.
@@ -113,11 +113,11 @@ class AkunBank {
     constructor(paramspemilik: string, paramssaldo: number) {
         this.pemilik = paramspemilik;
         this.saldo = paramssaldo;
-    }
+    };
 
     deposit(amount: number) {
         this.saldo +=  amount
-    }
+    };
 
     withdraw(amount: number) {
         if(this.saldo >= amount) {
@@ -125,18 +125,18 @@ class AkunBank {
             return"withdraw berhasil"
         } else {
             return "saldo tidak cukup"
-        }
-    }
+        };
+    };
 
     infoSaldo() {
         return this.saldo
-    }
-}
-const akunbank = new AkunBank("budi", 10)
+    };
+};
+const akunbank = new AkunBank("budi", 10);
 akunbank.deposit(15);
 akunbank.deposit(15);
 console.log(akunbank.infoSaldo());
 const akunbank1 = new AkunBank("nicolas", 50);
 console.log(akunbank1.infoSaldo());
-console.log(akunbank1.withdraw(60))
+console.log(akunbank1.withdraw(60));
 
