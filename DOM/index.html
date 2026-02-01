@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Selection</title>
+  <style>
+    * { 
+        border: 2px solid #dedede; 
+        padding: 15px; 
+        margin: 15px; 
+    }
+    html { 
+      margin: 0;
+      padding: 0;
+    }
+    body { 
+      max-width: 600px;
+      margin: 30px auto;
+      font-family: sans-serif;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="judul">Hello World</h1>
+  <div id="container">
+      <section id="a">
+          <p class="p1">paragraf 1</p>
+          <a href="http://instagram.com/BenyGunadi">Instagram Beny Gunadi</a>
+          <p class="p2">paragraf 2</p>
+          <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+          <p>paragraf 4</p>
+          <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+          </ul>
+           <button id="button" onclick="update()">Submit</button>
+      </section>
+  </div>
+<!-- JavaScript -->
+<script>
+  // document.getElementById
+  // => mengembalikan element
+  function update() {
+    const button = document.getElementById("button");
+    button.innerHTML = "submit berhasil"
+  }
+
+  // document.getElementsByTagName
+  // => mengembalikan HTML collections
+  const p = document.getElementsByTagName("p");
+  p[0].innerText = "paragraf 1 ini diupdate melalui javascript";
+  p[1].innerText = "paragraf 2 ini diupdate melalui javascript";
+
+  // document.getElementsByClassName
+  // => mengembalikan HTML collections
+  const p3 = document.getElementsByClassName("p3");
+  p3[0].textContent = "update berhasil melalui classname";
+
+  // document.QuerySelector
+  // => mengembalikan element
+  const judul = document.querySelector("#judul")
+  judul.style.color = "orange"
+
+  // document.QuerySelectorAll
+  // => mengembalikan NodeList
+  const li = document.querySelectorAll("li");
+  for(let i = 0; i < li.length; i++) {
+     li[i].style.backgroundColor = "cyan"
+  }
+ 
+</script>
+</body>
+</html>
