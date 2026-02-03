@@ -1,0 +1,99 @@
+<!-- SENIN, 3 FEBRUARY 2026, 12.20 - 13.05 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Selection</title>
+  <style>
+    * { 
+        border: 2px solid #dedede; 
+        padding: 15px; 
+        margin: 15px; 
+    }
+    html { 
+      margin: 0;
+      padding: 0;
+    }
+    body { 
+      max-width: 600px;
+      margin: 30px auto;
+      font-family: sans-serif;
+      color: #333;
+    }
+    .bg {
+      background-color: lightblue;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <h1 id="judul">Hello World</h1>
+  <div id="container">
+      <section id="a">
+          <p class="p1">paragraf 1</p>
+          <a href="http://instagram.com/Beny Gunadi">Instagram Beny  Gunadi</a>
+          <p class="p2">paragraf 2</p>
+          <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+          <p>paragraf 4</p>
+          <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+          </ul>
+          <button onclick="lampubg()">lampu</button>
+      </section>
+  </div>
+
+<script>
+  // setAttribute baru
+    const judul = document.getElementsByTagName("h1")[0];
+    judul.setAttribute("nama", "beny");
+
+    const a = document.querySelector("section#a a");
+    a.setAttribute("id", "link")
+    // getAttribute untuk mendapatkan valuenya
+    a.getAttribute("id")
+
+    // class List
+    const p2 = document.querySelector(".p2");
+    // classList.add
+    // menambahkan value class tanpa meniban value lama
+    p2.classList.add("label");
+    p2.classList.add("p3");
+
+    // classList.revome
+    // menghapus value class jika ada yg bernama "label"
+    p2.classList.remove("label");
+
+    // classList.toggle
+    // menambahkan value jika tidak ada, jika ada maka akan dihapus
+    p2.classList.toggle("p4");
+          // membuat lampu
+    function lampubg () {
+      //  const docs = document.getElementsByTagName("body")[0];
+      // docs.classList.toggle("bg")
+      const docs = document.body.classList.toggle("bg");
+    };
+
+    // classList.item
+    // untuk melihat class di dalam tag jika ada ditampilkan jika tidak ada false
+    p2.classList.item("2");
+
+    // classList.contains
+    // melihat apakah ada class p4 di tag p2, jika ada true jika tidak ada false
+    p2.classList.contains("p4");
+
+    // classList.replace
+    // untuk mengganti class di dalam tag
+    p2.classList.replace("p4", "p7");
+    
+
+
+
+</script>
+</body>
+</html>
