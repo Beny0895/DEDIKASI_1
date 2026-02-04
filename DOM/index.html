@@ -43,38 +43,42 @@
            <button id="button" onclick="update()">Submit</button>
       </section>
   </div>
-<!-- JavaScript -->
+
 <script>
+// NO 1 // MENGAMBIL ELEMENT DENGAN ID
   // document.getElementById
   // => mengembalikan element
   function update() {
     const button = document.getElementById("button");
     button.innerHTML = "submit berhasil"
-  }
+  };
 
+// NO 2 //MENGAMBIL ELEMENT DENGAN TAG HTML
   // document.getElementsByTagName
   // => mengembalikan HTML collections
   const p = document.getElementsByTagName("p");
   p[0].innerText = "paragraf 1 ini diupdate melalui javascript";
   p[1].innerText = "paragraf 2 ini diupdate melalui javascript";
 
+// NO 3 //MENGAMBIL ELEMENT DENGAN CLASS
   // document.getElementsByClassName
   // => mengembalikan HTML collections
   const p3 = document.getElementsByClassName("p3");
   p3[0].textContent = "update berhasil melalui classname";
 
+// NO 4 //MENGAMBIL ELEMENT DENGAN QUERY SELECTOR
   // document.QuerySelector
   // => mengembalikan element
-  const judul = document.querySelector("#judul")
-  judul.style.color = "orange"
+  const judul = document.querySelector("#judul");
+  judul.style.color = "orange";
 
+// NO 5 //MENGAMBIL ELEMENT DENGAN QUERY SELECTOR ALL
   // document.QuerySelectorAll
   // => mengembalikan NodeList
   const li = document.querySelectorAll("li");
   for(let i = 0; i < li.length; i++) {
      li[i].style.backgroundColor = "cyan"
-  }
- 
+  };
 </script>
 </body>
 </html>
