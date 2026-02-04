@@ -1,0 +1,113 @@
+<!-- RABU, 4 FEBRUARY 2026, 11.30 - 13.05 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Selection</title>
+  <style>
+    * { 
+        border: 2px solid #dedede; 
+        padding: 15px; 
+        margin: 15px; 
+    }
+    html { 
+      margin: 0;
+      padding: 0;
+    }
+    body { 
+      max-width: 600px;
+      margin: 30px auto;
+      font-family: sans-serif;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="judul">Hello World</h1>
+  <div id="container">
+      <section id="a">
+          <p class="p1">paragraf 1</p>
+          <a href="http://instagram.com/Beny Gunadi">Instagram Beny  Gunadi</a>
+          <p class="p2">paragraf 2</p>
+          <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+          <p>paragraf 4</p>
+          <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+          </ul>
+          
+      </section>
+  </div>
+
+<script>
+// NO 1 // MEMBUAT & MEMASUKAN ELEMENT KE AKHIR
+    // document.createElement
+    // membuat tag pada html
+    const pBaru = document.createElement("p");
+
+    // document.createTextNode
+    // membuat tulisan di dalam tag
+    const textP = document.createTextNode("paragraf baru");
+
+    // menggabungkan text ke dalam tag
+    pBaru.appendChild(textP);
+
+    // memasukan element yg sudah dibuat kebody html nya
+    // appendChild menyimpan ke akhir
+    const sectionA = document.getElementById("a");
+    sectionA.appendChild(pBaru);
+
+// NO 2 // MEMBUAT & MEMASUKAN ELEMENT KE AWAL/TENGAH
+    // document.createElement
+    // membuat tag pada html
+    const liBaru = document.createElement("li");
+
+    // document.createTextNode
+    // membuat tulisan di dalam tag
+    const textLi = document.createTextNode("item baru");
+
+    //  menggabungkan text ke dalam tag
+    liBaru.appendChild(textLi);
+
+    // memasukan element yg sudah dibuat kebody html nya
+    // appendChild menyimpan ke akhir
+    const ul = document.querySelector("section#b ul");
+      // memanggil parent jika tidak ada class/id. lalu memberitahu letak posisinya dengan pseudo-class css.(first-child, nth-child())
+    const li2 = ul.querySelector("li:nth-child(2)");
+    ul.insertBefore(liBaru, li2);
+
+// NO 3 // MENGHAPUS CHILD
+    // mencari element yg akan dihapus
+    const href = document.getElementsByTagName("a")[0];
+    // mencari parent dari elemt yg akan dihapus
+    const sectiona = document.getElementById("a");
+    // menghapus element
+    sectiona.removeChild(href);
+
+// NO 4 // MENGGANTI NODE & ELEMENT BARU
+    // mengambil data
+    const sectionB = document.getElementById("b");
+    const p4 = sectionB.getElementsByTagName("p")[0];
+
+    // document.createElement
+    // membuat tag pada html
+    const h2 = document.createElement("h2");
+
+    // document.createTextNode
+    // membuat tulisan di dalam tag
+    const texth2 = document.createTextNode("Judul Baru");
+
+    // menggabungkan text ke dalam tag
+    h2.appendChild(texth2);
+
+    // memasukan element yg sudah dibuat kebody html nya
+    // appendChild menyimpan ke akhir
+    sectionB.replaceChild(h2, p4);
+</script>
+</body>
+</html>
