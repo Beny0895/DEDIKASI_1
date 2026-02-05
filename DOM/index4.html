@@ -1,0 +1,102 @@
+<!-- KAMIS, 5 FEBRUARY 2026, 14.00 - 15.25 -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Selection</title>
+  <style>
+    * { 
+        border: 2px solid #dedede; 
+        padding: 15px; 
+        margin: 15px; 
+    }
+    html { 
+      margin: 0;
+      padding: 0;
+    }
+    body { 
+      max-width: 600px;
+      margin: 30px auto;
+      font-family: sans-serif;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="judul">Hello World</h1>
+  <div id="container">
+      <section id="a">
+          <p class="p1">paragraf 1</p>
+          <a href="http://instagram.com/BenyGunadi">Instagram Beny Gunadi</a>
+          <p class="p2">paragraf 2</p>
+          <p class="p3">tombol ubah warna paragraf 2</p>
+          <button onclick="ubahBgP1()">ubah warna paragraf 1</button>
+      </section>
+      <section id="b">
+          <p>tombol tambah list item, klik 2x</p>
+          <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+          </ul>
+      </section>
+  </div>
+
+<script>
+// NO 1 // EVENT HANDLER
+    //  INLINE HTML ATTRIBUTE
+    // mencapurkan html & js difile html. memodifikasi html padahal bisa tanpa memodifikasi html nya
+    const p1 = document.querySelector("section#a .p1");
+    function ubahBgP1() {
+        p1.style.backgroundColor = "blue";
+        p1.style.color = "white";
+    };
+
+//     // ELEMENT METHOD
+    // membuat handler di dalam js, sehingga tidak menyenruh code html nya
+    // memanggil function tidak perlu kurung tutup '()' karena akan menjalankan langsung
+    const p2 = document.querySelectorAll(".p2")[0];
+    function ubahBgP2() {
+        p2.style.backgroundColor = "red";
+        p2.style.color = "pink";
+    };
+    const p3 = document.querySelectorAll("section#a .p3")[0];
+    p3.onclick = ubahBgP2;
+
+// NO 2 // ADD EVENT LISTENER ()
+    const p4 = document.querySelector("section#b p");
+    p4.addEventListener("dblclick", function() {
+        const li = document.createElement("li");
+        const text = document.createTextNode("item baru");
+        li.appendChild(text);
+        const ul = document.querySelector("section#b ul");
+        ul.appendChild(li);
+
+
+// NO 3 // PERBEDAAN ADD EVENT LISTENER () & EVENT HANDLER
+    // EVENT HANDLER
+        // menimpa value yg lama
+        const eventHandler = document.querySelectorAll("section#b ul li")[0];
+        eventHandler.onclick = function() {
+            eventHandler.style.backgroundColor = "red";
+        };
+         eventHandler.onclick = function() {
+            eventHandler.style.color = "blue";
+        };
+
+    // EVENT LISTENER
+        // tidak menimpa value lama
+        const eventListener = document.querySelectorAll("section#b ul li")[1];
+        
+        eventListener.addEventListener("click", function() {
+            eventListener.style.backgroundColor = "red";
+        });
+        eventListener.addEventListener("click", function() {
+            eventListener.style.color = "blue";
+        });
+    });
+</script>
+</body>
+</html>
