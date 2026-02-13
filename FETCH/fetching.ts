@@ -1,4 +1,4 @@
-// SELASA, 10 FEBRUARY 2026, 13.30 - 14.30
+// TUESDAY, 10 FEBRUARY 2026, 13:30 - 14:30
 
 console.log("1");
 
@@ -11,16 +11,16 @@ async function user() {
 user();
 console.log("4");
 
-// Fungsi async: async dipakai di depan function. Artinya: Function itu pasti return Promise di dalamnya, dan kamu boleh pakai await.
-// Fungsi await: await dipakai buat nunggu hasil Promise.
-// Program nunggu Promise selesai Tapi tidak nge-block aplikasi Kodenya keliatan kayak synchronous (atas ke bawah).
-// Yang terjadi di balik layar: Function async dipanggil -> Ketemu await fetch(...).
-  // JavaScript: mengirim tugas async (fetch) ke Web API / environment tidak menunggu, lanjut eksekusi kode lain (event loop tetap jalan).
-  // Saat fetch selesai: hasilnya masuk ke microtask queue JavaScript balik lagi ke function async itu eksekusi dilanjutkan tepat setelah await.
-// Hanya “menunggu” cuma function async itu saja, Bukan menunggu seluruh program JavaScript
+// Async function: async is used in the front function. This means: The function must return a Promise inside, and you can use await.
+// Await function: await is used to wait for the result of a Promise.
+// The program waits for the Promise to complete but doesn't block the application. The code looks synchronous (top to bottom).
+// What happens behind the scenes: The async function is called -> Meets await fetch(...).
+  // JavaScript: Sends an async task (fetch) to the Web API/environment without waiting, continues executing other code (the event loop continues running).
+  // When the fetch is complete, the result goes to the JavaScript microtask queue, and execution resumes immediately after the await.
+// Just “wait” for that async function, Not waiting for the entire JavaScript program
 
-// async → mengizin penggunaan await
-// await → menunggu Promise selesai
-// proses async dikirim ke Web API lewat background dan diolah
-// JavaScript tetap jalanin kode lain
-// setelah proses async selesai -> dikirim lagi ke JavaScript
+// async → allows the use of await
+// await → waits for the Promise to complete
+// the async process is sent to the Web API in the background and processed
+// JavaScript continues to run other code
+// after the async process completes, it is sent back to JavaScript
