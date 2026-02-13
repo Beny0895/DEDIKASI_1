@@ -1,10 +1,10 @@
-<!-- SELASA, 3 FEBRUARY 2026, 12.20 - 13.05 -->
+<!-- TUESDAY, 3 FEBRUARY 2026, 12:20 - 13:05 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dom Selection</title>
+  <title>Dom Manipulation</title>
   <style>
     * { 
         border: 2px solid #dedede; 
@@ -29,7 +29,7 @@
 </head>
 <body>
 
-  <h1 id="judul">Hello World</h1>
+  <h1 id="title">Hello World</h1>
   <div id="container">
       <section id="a">
           <p class="p1">paragraf 1</p>
@@ -44,53 +44,54 @@
               <li>item 2</li>
               <li>item 3</li>
           </ul>
-          <button onclick="lampubg()">lampu</button>
+          <button onclick="lampbg()">lamp</button>
       </section>
   </div>
 
 <script>
-// NO 1 // MEMBUAT & MENGECEK ATTRIBUTE ID/CLASS, DLL. DENGAN SET & GET
-  // setAttribute baru
-    const judul = document.getElementsByTagName("h1")[0];
-    judul.setAttribute("nama", "beny");
+// NO 1 // CREATING & CHECKING ID/CLASS ATTRIBUTES, ETC. WITH SET & GET
+// new setAttribute
+    const title = document.getElementsByTagName("h1")[0];
+    judul.setAttribute("name", "beny");
 
     const a = document.querySelector("section#a a");
     a.setAttribute("id", "link");
-    // getAttribute untuk mendapatkan valuenya
+    // getAttribute to get the value
     a.getAttribute("id");
   
-// NO 2 // CLASS LIST
+// NO. 2 // CLASS LIST
     const p2 = document.querySelector(".p2");
-    // classList.add
-    // menambahkan value class tanpa meniban value lama
+// classList.add
+    // add class values ​​without overwriting the old values
     p2.classList.add("label");
     p2.classList.add("p3");
 
-    // classList.revome
-    // menghapus value class jika ada yg bernama "label"
+// classList.revome
+    // removes the class value if there is one named "label"
     p2.classList.remove("label");
 
-    // classList.toggle
-    // menambahkan value jika tidak ada, jika ada maka akan dihapus
+// classList.toggle
+    // add a value if it doesn't exist, otherwise it will be removed
     p2.classList.toggle("p4");
-          // membuat lampu
-    function lampubg () {
+         // create a lamp
+    function lampbg () {
       //  const docs = document.getElementsByTagName("body")[0];
       // docs.classList.toggle("bg")
       const docs = document.body.classList.toggle("bg");
     };
 
-    // classList.item
-    // untuk melihat class di dalam tag jika ada ditampilkan jika tidak ada false
+// classList.item
+    // to see the class inside the tag if it exists displayed if not false
     p2.classList.item("2");
 
-    // classList.contains
-    // melihat apakah ada class p4 di tag p2, jika ada true jika tidak ada false
+// classList.contains
+    // check if there is a p4 class in the p2 tag, if there is true if there is not false
     p2.classList.contains("p4");
 
-    // classList.replace
-    // untuk mengganti class di dalam tag
+// classList.replace
+  // to replace the class inside the tag
     p2.classList.replace("p4", "p7");
+    
 </script>
 </body>
 </html>
