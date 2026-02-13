@@ -1,4 +1,4 @@
-<!-- SENIN, 2 FEBRUARY 2026, 06.30 - 07.30 -->
+<!-- MONDAY, 2 FEBRUARY 2026, 06:30 - 07:30 -->
  
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,7 @@
 </head>
 <body>
 
-  <h1 id="judul">Hello World</h1>
+  <h1 id="title">Hello World</h1>
   <div id="container">
       <section id="a">
           <p class="p1">paragraf 1</p>
@@ -45,36 +45,36 @@
   </div>
 
 <script>
-// NO 1 // MENGAMBIL ELEMENT DENGAN ID
-  // document.getElementById
-  // => mengembalikan element
+// NO 1 // GET ELEMENT BY ID
+// document.getElementById
+// => returns element
   function update() {
     const button = document.getElementById("button");
-    button.innerHTML = "submit berhasil"
+    button.innerHTML = "succes submit"
   };
 
-// NO 2 //MENGAMBIL ELEMENT DENGAN TAG HTML
-  // document.getElementsByTagName
-  // => mengembalikan HTML collections
+// NO 2 // RETRIEVING ELEMENTS BY HTML TAG
+// document.getElementsByTagName
+// => returns an HTML collection
   const p = document.getElementsByTagName("p");
-  p[0].innerText = "paragraf 1 ini diupdate melalui javascript";
-  p[1].innerText = "paragraf 2 ini diupdate melalui javascript";
+  p[0].innerText = "This paragraph 1 is updated via javascript";
+  p[1].innerText = "This paragraph 1 is updated via javascript";
 
-// NO 3 //MENGAMBIL ELEMENT DENGAN CLASS
-  // document.getElementsByClassName
-  // => mengembalikan HTML collections
+// NO 3 // GETTING ELEMENTS BY CLASS
+// document.getElementsByClassName
+// => returns an HTML collection
   const p3 = document.getElementsByClassName("p3");
-  p3[0].textContent = "update berhasil melalui classname";
+  p3[0].textContent = "update successful via classname";
 
-// NO 4 //MENGAMBIL ELEMENT DENGAN QUERY SELECTOR
-  // document.QuerySelector
-  // => mengembalikan element
-  const judul = document.querySelector("#judul");
-  judul.style.color = "orange";
+// NO 4 // RETRIEVING ELEMENTS WITH QUERY SELECTOR
+// document.QuerySelector
+// => returns element
+  const title = document.querySelector("#title");
+  title.style.color = "orange";
 
-// NO 5 //MENGAMBIL ELEMENT DENGAN QUERY SELECTOR ALL
-  // document.QuerySelectorAll
-  // => mengembalikan NodeList
+// NO 5 // FETCHING ELEMENTS WITH QUERY SELECTOR ALL
+// document.QuerySelectorAll
+// => returns NodeList
   const li = document.querySelectorAll("li");
   for(let i = 0; i < li.length; i++) {
      li[i].style.backgroundColor = "cyan"
