@@ -1,0 +1,86 @@
+<!-- FRIDAY, 13 FEBRUARY 2026, 14:00 -15:30  -->
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+ 
+</head>
+<body>
+<h1>LEARNING TAILWINDCSS</h1>
+<h1 class="flex justify-center text-xl text-blue-600 pt-2">JUSTIFY-ELEMENTS</h1>
+
+<!-- Justify-Start -->
+<div class="border border-green-400 m-8 h-32 w-full flex justify-start"> <!--Justify-Start makes the element left/first aligned horizontally-->
+    <h2>JUSTIFY-START</h2>
+</div>
+
+<!-- Justify-Center -->
+<div class="border border-green-400 m-8 h-32 w-full flex justify-center"> <!--Justify-Center makes the element horizontally center aligned-->
+    <h2>JUSTIFY-CENTER</h2>
+</div>
+
+<!-- Justify-End -->
+<div class="border border-green-400 m-8 h-32 w-full flex justify-end"> <!--Justify-End makes the element right/edge aligned horizontally-->
+    <h2>JUSTIFY-END</h2>
+</div>
+
+<!-- Justify-Between -->
+ <div class="border border-green-500 mb-4 flex justify-between">
+    <h2 class="py-4">JUSTIFY-BETWEEN</h2> <!--Justify-Between creates horizontal spacing between elements-->
+    <h2 class="py-4">JUSTIFY-BETWEEN</h2>
+    <h2 class="py-4">JUSTIFY-BETWEEN</h2>
+</div>
+
+<!-- Justify-Around -->
+ <div class="border border-green-500 mb-4 flex justify-around">
+    <h2 class="py-4">JUSTIFY-AROUND</h2> <!--Justify-Around creates horizontal spacing between elements and to the left, right of the start and end elements-->
+    <h2 class="py-4">JUSTIFY-AROUND</h2>
+    <h2 class="py-4">JUSTIFY-AROUND</h2>
+    <h2 class="py-4">JUSTIFY-AROUND</h2>
+</div>
+
+<!-- Justify-Evenly -->
+ <div class="border border-green-500 mb-4 flex justify-evenly">
+    <h2 class="py-4">JUSTIFY-EVENLY</h2> <!--Justify-Evenly creates more horizontal spacing between elements and to the left, right of the start and end elements-->
+    <h2 class="py-4">JUSTIFY-EVENLY</h2>
+    <h2 class="py-4">JUSTIFY-EVENLY</h2>
+    <h2 class="py-4">JUSTIFY-EVENLY</h2>
+    <h2 class="py-4">JUSTIFY-EVENLY</h2>
+</div>
+
+<div class="border border-black"></div>
+<h1 class="flex justify-center text-xl text-orange-600 pt-2">ITEMS-ELEMENTS</h1>
+
+<!-- Item-Start -->
+<div class="border border-red-400 m-8 h-32 w-32 flex items-start">
+    <h2>ITEMS-START</h2> <!--Items-Star makes elements vertically left/start aligned-->
+</div>
+
+<!-- Item-Center -->
+<div class="border border-red-400 m-8 h-32 w-32 flex items-center"> 
+    <h2>ITEMS-CENTER</h2> <!--Items-Center makes the elements vertically center aligned-->
+</div>
+
+<!-- Item-End -->
+<div class="border border-red-400 m-8 h-32 w-32 flex items-end">
+    <h2>ITEMS-END</h2> <!--Items-End makes elements vertically aligned right/end-->
+</div>
+
+<!-- Item-Baseline -->
+<div class="border border-red-400 m-8 h-32 w-full flex items-baseline"> 
+    <h2 class="text-xl pr-1">ITEMS-BASELINE</h2> 
+    <h2 >ITEMS-BASELINE</h2> <!--Items-Baseline makes text of different sizes aligned-->
+</div>
+
+<!-- Item-Stretch -->
+<div class="flex h-32 items-stretch gap-2 border border-red-400">
+  <div class="bg-blue-400 w-20">ITEMS-STRECH</div><!--Items-Strech makes all items in the flex container the same height as the container. The height of all items follows the height of the parent-->
+  <div class="bg-red-400 w-20">ITEMS-STRECH</div>
+  <div class="bg-green-400 w-20">ITEMS-STRECH</div>
+</div>
+
+</body>
+</html>
