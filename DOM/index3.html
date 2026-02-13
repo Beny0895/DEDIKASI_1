@@ -1,10 +1,10 @@
-<!-- RABU, 4 FEBRUARY 2026, 11.30 - 13.05 -->
+<!-- WEDNESDAY, 4 FEBRUARY 2026, 11:30 - 13:05 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dom Selection</title>
+  <title>Dom Manipulation-2</title>
   <style>
     * { 
         border: 2px solid #dedede; 
@@ -25,7 +25,7 @@
 </head>
 <body>
 
-  <h1 id="judul">Hello World</h1>
+  <h1 id="title">Hello World</h1>
   <div id="container">
       <section id="a">
           <p class="p1">paragraf 1</p>
@@ -45,68 +45,68 @@
   </div>
 
 <script>
-// NO 1 // MEMBUAT & MEMASUKAN ELEMENT KE AKHIR
-    // document.createElement
-    // membuat tag pada html
-    const pBaru = document.createElement("p");
+// NO 1 // CREATING & INSERTING ELEMENTS TO THE END
+// document.createElement
+// creating tags in HTML
+    const pNew = document.createElement("p");
 
     // document.createTextNode
-    // membuat tulisan di dalam tag
-    const textP = document.createTextNode("paragraf baru");
+    // create text inside the tag
+    const textP = document.createTextNode("New Paragraf");
 
-    // menggabungkan text ke dalam tag
-    pBaru.appendChild(textP);
+    // combine text into tags
+    pNew.appendChild(textP);
 
-    // memasukan element yg sudah dibuat kebody html nya
-    // appendChild menyimpan ke akhir
+    // insert the created element into the HTML body
+    // appendChild saves it to the end
     const sectionA = document.getElementById("a");
-    sectionA.appendChild(pBaru);
+    sectionA.appendChild(pNew);
 
-// NO 2 // MEMBUAT & MEMASUKAN ELEMENT KE AWAL/TENGAH
-    // document.createElement
-    // membuat tag pada html
-    const liBaru = document.createElement("li");
+// NO 2 // CREATE & INSERT ELEMENTS TO THE BEGINNING/Middle
+    // document. createElement
+    // create tags in html
+    const liNew = document.createElement("li");
 
     // document.createTextNode
-    // membuat tulisan di dalam tag
+    // create text inside the tag
     const textLi = document.createTextNode("item baru");
 
-    //  menggabungkan text ke dalam tag
-    liBaru.appendChild(textLi);
+    // combine text into tags
+    liNew.appendChild(textLi);
 
-    // memasukan element yg sudah dibuat kebody html nya
-    // appendChild menyimpan ke akhir
+    // insert the created element into the HTML body
+    // appendChild saves it to the end
     const ul = document.querySelector("section#b ul");
-      // memanggil parent jika tidak ada class/id. lalu memberitahu letak posisinya dengan pseudo-class css.(first-child, nth-child())
+      // call parent if there is no class/id. then tell its position with css pseudo-class.(first-child, nth-child())
     const li2 = ul.querySelector("li:nth-child(2)");
-    ul.insertBefore(liBaru, li2);
+    ul.insertBefore(liNew, li2);
 
-// NO 3 // MENGHAPUS CHILD
-    // mencari element yg akan dihapus
+// NO 3 // DELETE CHILD
+// search for the element to be deleted
     const href = document.getElementsByTagName("a")[0];
-    // mencari parent dari elemt yg akan dihapus
+    // find the parent of the element to be deleted
     const sectiona = document.getElementById("a");
-    // menghapus element
+    // delete element
     sectiona.removeChild(href);
 
-// NO 4 // MENGGANTI NODE & ELEMENT BARU
-    // mengambil data
+// NO 4 // REPLACING NODE & NEW ELEMENT
+    // retrieving data
     const sectionB = document.getElementById("b");
     const p4 = sectionB.getElementsByTagName("p")[0];
 
     // document.createElement
-    // membuat tag pada html
+    // create a tag in HTML
     const h2 = document.createElement("h2");
 
     // document.createTextNode
-    // membuat tulisan di dalam tag
-    const texth2 = document.createTextNode("Judul Baru");
+    // create text inside the tag
+    const texth2 = document.createTextNode("New Title");
 
-    // menggabungkan text ke dalam tag
+    // combine text into tags
     h2.appendChild(texth2);
 
-    // memasukan element yg sudah dibuat kebody html nya
-    // appendChild menyimpan ke akhir
+    // insert the created element into the HTML body
+    // appendChild saves it to the end
     sectionB.replaceChild(h2, p4);
 </script>
 </body>
