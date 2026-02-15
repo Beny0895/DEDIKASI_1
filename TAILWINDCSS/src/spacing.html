@@ -1,0 +1,44 @@
+<!-- FRIDAY, 13 FEBRUARY 2026, 12:30 - 13:30 -->
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 1 browser screen = 16px x ...(rem) = ...(result px) -->
+    <!--m-1 = 0.25 rem -->
+    <!--m-2 = 0.5 rem -->
+    <!--m-8 = 4 rem -->
+    <!--m-4 means margin left, right, bottom, top = 2rem -->
+
+<!-- Padding only affects the space inside an element → to its children. -->
+<!-- Margin affects the space outside an element → to its parents & to its siblings. -->
+   
+<h1>LEARNING TAILWINDCSS</h1>
+
+<!-- Margin -->
+<div class="border border-red-500 m-4"> <!--m-4 means margin left, right, bottom, top = 2rem-->
+    <h2 class="p-4">MARGIN</h2>
+</div>
+
+<!-- Margin -->
+<div class="border border-red-500 m-[32px]"> <!--margin customization to px m-[32px]-->
+    <h2 class="px-4 py-8 flex justify-center">MARGIN</h2>
+</div>
+
+<!-- Padding -->
+<div class="border border-blue-500 m-4"> <!--padding customization to px m-[32px]-->
+    <h2 class="p-[32px] ">PADDING 1</h2>
+    <h2>pading</h2>
+</div>
+
+<!-- Padding -->
+<div class="border border-blue-500 mb-4">
+    <h2 class="py-4 p-4">PADDING 2</h2> <!--py-4 means padding top,buttom = 2rem-->
+</div>
+
+</body>
+</html>
