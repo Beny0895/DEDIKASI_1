@@ -1,0 +1,50 @@
+<!-- SUNDAY, 15 FEBRUARY 2026, 14:00 - -->
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+ 
+</head>
+<body>
+   
+  <h1>LEARNING TAILWINDCSS</h1>
+
+<!--Widht with Division Per Screen-->
+<div class="border border-blue-500 w-1/2 m-4"> <!--w-1/2 means the screen is only 50%-->
+    <h2>WIDHT</h2>
+</div>
+
+<!--Widht-->
+<div class="border border-blue-500 w-480 m-4"> 
+    <h2>WIDHT</h2>
+</div>
+
+<!--Height with Percentage need a Parent-->
+<div class="h-screen"> <!--The height percentage h-[50%] is calculated from the parent's height. If the parent doesn't have a defined height, then the percentage has no reference.-->
+  <div class="border border-green-500 h-[50%] "> <!--h-[100%] means using percent as the setting-->
+    <h2>Height</h2>
+  </div>
+</div>
+
+<!--Height with VH (Viewport Height)-->
+<div class="border border-orange-500 h-[50vh] my-4">  <!--If you use VH(Viewport Height), you don't need to define the height size again.-->
+    <h2>Height</h2>
+</div>
+
+
+<!--Height with the result of adding rem and default browser produces px-->
+ <div class="border border-blue-500 h-32 w-24 ml-8 flex justify-center items-center"> <!--h-32 means spacing scale 32px, from 2rem x 16px(browser default)--> 
+    <h2>HEIGHT</h2>
+ </div>
+
+ <!--Image-->
+<div class="border border-blue-500 w-1/2 m-4"> <!--w-1/2 means the screen is only 50%-->
+    <image src="https://m.media-amazon.com/images/S/pv-target-images/144540abcf5eb3ca17ea30a5ac3554dcd011a2880ccfba9694d13b27362060fe.jpg" alt="ironman"/>
+</div>
+
+
+</body>
+</html>
