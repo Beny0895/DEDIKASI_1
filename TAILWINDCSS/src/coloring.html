@@ -1,0 +1,48 @@
+<!-- MONDAY, 16 FEBRUARY 2026, 02:45 - 03:35  -->
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+<h1>LEARNING TAILWINDCSS</h1>
+
+ <!-- Text Color -->
+ <div class="m-2 border border-blue-500">
+    <h2 class="text-blue-500 p-2 font-semibold text-lg">TEXT-COLOR</h2> <!--just need to add a color class-->
+ </div>
+
+ <!-- Text Color Gradient -->
+ <div class="m-2 border border-blue-500">
+    <h2 class="text-transparent p-2 font-extrabold text-2xl 
+               bg-gradient-to-tr from-green-500 to-red-800 bg-clip-text ">TEXT-COLOR-GRADIENT</h2> <!--bg-clip-text text-transparent → required for text-->
+ </div>
+
+ <!-- Text Color Gradient 3 Colors -->
+ <div class="m-2 border border-blue-500">
+    <h2 class="text-transparent p-2 font-extrabold text-2xl 
+               bg-gradient-to-tr from-blue-500 via-yellow-500 to-green-800 bg-clip-text ">TEXT-COLOR-GRADIENT-3-COLORS</h2> <!--via is the middle
+               color, this is what makes it 3 colors, and can be used repeatedly-->
+ </div>
+
+ <!-- Background Color -->
+ <div class="m-2 text-center">
+    <h2 class="bg-green-500 p-2 text-white font-bold">BACKGROUND-COLOR</h2>
+ </div>
+
+ <!-- Background Color Gradient -->
+ <div class="m-2 text-center">
+    <h2 class="p-2 font-bold bg-gradient-to-r from-cyan-500 to-green-300">BACKGROUND-COLOR-GRADIENT</h2> <!--no need for bg-clip-text and
+    text-transparent because it is used in the background-->
+ </div>
+
+ <!-- Background Color Gradient 3 Colors -->
+ <div class="m-2 text-center bg-gradient-to-br from-yellow-500 via-orange-500 to-red-800"> <!--using via to create more than 1 color-->
+    <h2 class="p-16 font-bold">BACKGROUND-COLOR-GRADIENT-3COLORS</h2>
+ </div>
+
+</body>
+</html>
