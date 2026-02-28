@@ -1,0 +1,63 @@
+<!-- SABTU, 28 FEBRUARY 2026, 20:30 - 21-30 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning DOM</title>
+</head>
+<body>
+    <div>
+        <h1 id="textdom">Ini Adalah Dom</h1>
+        <button onclick="updateDom()">update dom</button>
+
+        <div style="border: 1.5px solid black; margin: 10px; text-align: center;">
+            <button style="padding: 2px; margin: 10px;" onclick="updateList()">tambahkan list</button>
+            <br>
+            <p style="border: 1.5px solid blue; padding: 2px; display: inline-block;">tambah pakai EVENTLISTENER click 2x </p>
+            <ul>
+                <li style="padding: 5px; font-weight: bold; border: 1.5px solid black; margin-bottom: 10px;">list items 1</li>
+                <li style="padding: 5px; font-weight: bold; border: 1.5px solid black; margin-bottom: 10px;">list items 2</li>
+                <li style="padding: 5px; font-weight: bold; border: 1.5px solid black;  margin-bottom: 10px;">list items 3</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <script>
+        function updateDom() {
+            const update = document.getElementById("textdom")
+            update.innerText = "Dom Sudah Di Update"
+        };
+        // INI EVENTHANDLER //
+        function updateList () {
+        const elementlist = document.createElement("li");
+        // style
+            elementlist.style.padding = "5px";
+            elementlist.style.fontWeight = "bold";
+            elementlist.style.border = "1px solid black"
+            elementlist.style.marginBottom = "10px"
+        const textlist = document.createTextNode("list baru eventhandler");
+        elementlist.appendChild(textlist);
+        const listplace = document.getElementsByTagName("ul")[0];
+        listplace.appendChild(elementlist)
+        }
+
+        // INI EVENTLISTENER //
+        const tombol = document.getElementsByTagName("p")[0]
+        tombol.addEventListener("dblclick", function() {
+            const elementlist = document.createElement("li");
+        // style
+            elementlist.style.padding = "5px";
+            elementlist.style.fontWeight = "bold";
+            elementlist.style.border = "1px solid black"
+            elementlist.style.marginBottom = "10px"
+        const textlist = document.createTextNode("list baru eventlistener");
+        elementlist.appendChild(textlist);
+        const listplace = document.getElementsByTagName("ul")[0];
+        listplace.appendChild(elementlist)
+        })
+    </script>
+</body>
+</html>
